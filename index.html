@@ -1,0 +1,79 @@
+﻿<html>
+<body>
+
+    <!--Declarative style (using React)-->
+    <div id="app">
+        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+        <script type="text/jsx">
+            const app = document.getElementById('app');
+
+            function HomePage()
+            {
+                const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
+                return (
+                    <div>
+                        <Header title="Develop. Preview. Ship. 🚀" />
+                        <Header title="React 💙" />
+                        <ul>
+                            {
+                                names.map()
+                            }fds
+                        </ul>
+                    </div>
+                );
+            }
+
+            function Header(props)
+            {
+                console.log(props);
+                //return (<h1>{createTitle(props.title)}</h1>);
+                return <h1>{`Checkout my cool title: ${props.title}`}</h1>
+            }
+
+            function createTitle(title)
+            {
+                if(title)
+                {
+                    return title;
+                }
+                else
+                {
+                    return 'Default title';
+                }
+            }
+
+            ReactDOM.render(<HomePage />, app);
+
+        </script>
+
+    </div>
+
+    <!--In Javascript using imperative programming-->
+    <!--<div id="app">
+        
+        <script type="text/javascript">
+            //Select the div element with 'app' id
+            const app = document.getElementById('app');
+
+            //Create a new H1 element
+            const header = document.createElement('h1');
+
+            //Create a new text node for the H1 element
+            const headerContent = document.createTextNode('Develop. Preview. Ship. 🚀');
+
+            //Apped the text to the H1 element
+            header.appendChild(headerContent);
+
+            //Place the H1 element inside the div
+            app.appendChild(header); 
+
+
+        </script>
+
+    </div>-->
+</body>
+</html>
